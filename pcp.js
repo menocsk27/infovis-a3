@@ -10,10 +10,10 @@ var d3;
     const marginBottom = 20;
     const marginLeft = 10;
 
-    // Create an horizontal (*x*) scale for each key.
+    // Create an scale for each key. // In the original, this was only horizontal (*x*) 
     const val_extent = new Map(Array.from(keys, key => [key, d3.scaleLinear(d3.extent(data, d => d[key]), [marginLeft, width - marginRight])]));
 
-    // Create the vertical (*y*) scale.
+    // Create the axes scale. // In the original, this was only vertical (*y*) 
     const var_extent = d3.scalePoint(keys, [marginTop, height - marginBottom]);
 
     // Create the color scale.
